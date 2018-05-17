@@ -1,0 +1,20 @@
+{
+  "name": "tybalt",
+  "version": "2.0.0",
+  "description": "A Discord.js based robot I built for my GW2 guild. His main purpose is to help me manage things like raid logs, as well as help me greet new members.",
+  "main": "./src/tybalt.js",
+  "scripts": {
+    "start": "node ./src/tybalt.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Lundborg",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "11.3.2",
+    "discord.js-commando": "0.10.0",
+    "sqlite": "2.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "1.17.4"
+  }
+}
