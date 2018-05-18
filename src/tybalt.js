@@ -5,7 +5,7 @@ const {
 } = require('discord.js-commando');
 const path = require('path');
 const config = require(__dirname + '../../bot-config.json');
-const functions = require(__dirname + '/data/functions.js');
+const functions = require(__dirname + '/functions/general.js');
 
 //Sets up the SQLite provider
 sql.open(path.join(__dirname, "/db/settings.sqlite3")).then((db) => {
