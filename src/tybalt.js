@@ -24,9 +24,14 @@ const client = new CommandoClient({
 //TODO: Reimplement custom commands
 client.registry
     .registerDefaultTypes()
+    .registerGroups([
+        ['admin', 'Administrative Commands'],
+        ['guild', 'Guild Specific Commands'],
+        ['misc', 'Miscellaneous Commands']
+    ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-//.registerCommandsIn(path.join(__dirname, 'commands'));
+    .registerCommandsIn(path.join(__dirname, 'commands'));
 
 //Error and warning handlers
 client.on('error', (e) => console.error(e));
