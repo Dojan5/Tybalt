@@ -45,6 +45,20 @@ client.on('ready', () => {
     });
 });
 
+//Code to be executed when the client disconnects
+client.on('disconnect', (e) => {
+    console.error(`Hey, commander. I lost connection on ${functions.Horologicus}`);
+    console.error(e);
+});
+
+client.on('message', msg => {
+    //TODO: *All* the stuff
+});
+
+client.on('guildMemberAdd', member => {
+    //TODO: ALL the stuff here as well!
+});
+
 client.login(config.Token).catch(error => {
-    console.log('Sorry Commander, I cannot authentica.\n' + error);
+    console.log('Sorry Commander, I cannot authenticate.\n' + error);
 });
