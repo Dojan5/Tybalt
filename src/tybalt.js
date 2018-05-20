@@ -31,7 +31,7 @@ client.registry
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, 'commands'));
+    .registerCommandsIn(path.join(__dirname, '/commands'));
 
 //Error and warning handlers
 client.on('error', (e) => console.error(e));
@@ -62,6 +62,11 @@ client.on('message', msg => {
 
 client.on('guildMemberAdd', member => {
     //TODO: ALL the stuff here as well!
+});
+
+//Executes when the client first joins a guild.
+client.on('guildCreate', guild => {
+    //TODO: Finish the setup function and add it here. Don't forget to make it available through a command as well.
 });
 
 client.login(config.Token).catch(error => {
